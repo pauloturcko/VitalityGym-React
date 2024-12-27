@@ -1,11 +1,16 @@
 import React from 'react';
-import ToggleMenu from './Components/Atoms/ToggleMenu';
+import { ThemeProvider } from 'styled-components';
+import theme from './assets/Styles/Theme';
+import GlobalStyles from './assets/Styles/GlobalStyles';
+import Header from './assets/Components/Organisms/Header';
+
 
 const App = () => {
   return (
-    <div>
-      <ToggleMenu />
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Header />
+    </ThemeProvider>
   )
 };
 
